@@ -3,8 +3,11 @@
   "builds": [
     {
       "src": "frontend/package.json",
-      "use": "@vercel/vite",
-      "config": { "project": "frontend", "distDir": "dist" }
+      "use": "@vercel/static-build",
+      "config": {
+        "buildCommand": "npm run build",
+        "outputDirectory": "dist"
+      }
     }
   ],
   "routes": [
